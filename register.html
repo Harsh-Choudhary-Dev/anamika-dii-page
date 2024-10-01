@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <style>
+    body{
+      background-image: url("/images/Web_Photo_Editor.jpg");
+      height: 100vh;
+        width: 100%;
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .form-container{
+      margin: auto;
+      width: 100%;
+      background-color: blueviolet;
+      padding: 10px;
+    }
+    .left-content{  
+      color: rgb(41, 2, 66);
+    }
+
+    .btn--green {
+      background: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+      background-size: 100%;
+      animation: Gradient 3s infinite linear;
+      color: #fff;
+    }
+
+    .btn--green:hover{
+      color: #fff;
+text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+    }
+    .btn--green:hover {
+      color: #fff;
+    }
+    .btn::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 10rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.2s ease-out;
+    }
+    .btn{
+      font-family: sans-serif;
+      font-size: 2vh;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      display: inline-block;
+      border-radius: 10rem;
+      transition: all 0.5s cubic-bezier(0.2, 3, 0.4, 1);
+      position: relative;
+      /* This is for the btn::after element position absolute */
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+   
+    
+  </style>
+  <body>
+    <!-- <div style="width: 100%;height:100%; background-color:blueviolet;opacity:50%"></div> -->
+    <div class="container main-container" style="color:aliceblue;">
+    <div class="d-flex wrap-content">
+      <!-- <div class="d-flex justify-content-between"> -->
+        <div class="container" style="color: #fff;" >
+          <div class="d-flex flex-column mb-3 left-content">
+            <div class="p-2">
+              <p class="fs-2 fw-bold ">“Be yourself; everyone else is already taken.”</p>
+            </div>
+            <div class="p-2 fw-bold fs-2"> Get In Touch
+             </div>
+             
+            <div class="p-2 fs-5" style="background-color: rgb(211, 43, 226);"> If you have any business queries, then feel free to contact me. Let’s grab a coffee and jump on a conversation chat with me</div>
+            <div class="p-2 fs-4 fw-bold" style="color: #fff;">If already have a account</div>
+              <div class="p-2">
+                <button class="btn btn--green">Login &rarr;</button>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="container form-container "> 
+          <div class="d-flex flex-column mb-3">
+            <div class="p-2">
+              <div class="p-2">Your Name</div>
+              <div class="p-2 ">
+                <div class="row d-flex flex-wrap">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">How Can I help you with ?
+                  </label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="p-2">
+              What Do You do ?
+              <div class="input-group input-group-sm mb-3">
+                <!-- <span class="input-group-text" id="inputGroup-sizing-sm">Small</span> -->
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+            </div>
+            <div class="p-2">
+              <div class="row g-3">
+                <div class="col-sm-7">
+                  <input type="text" class="form-control" placeholder="City" aria-label="City">
+                </div>
+                <div class="col-sm">
+                  <input type="text" class="form-control" placeholder="State" aria-label="State">
+                </div>
+                <div class="col-sm">
+                  <input type="text" class="form-control" placeholder="Zip" aria-label="Zip">
+                </div>
+              </div>
+            </div>
+            <div class="p-2">
+              <label for="inputPassword5" class="form-label"> Password</label>
+<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+<div id="passwordHelpBlock" class="form-text" style="color: aliceblue;">
+  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+</div>
+            </div>
+            <div class="p-2">
+              <label for="inputPassword5" class="form-label">Confirm Password</label>
+<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+<div id="passwordHelpBlock" class="form-text" style="color: aliceblue;">
+  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+</div>
+            </div>
+            
+            <div class="p-2 text-center">
+              <button type="button"  class="btn btn-primary">Submit</button>
+
+            </div>
+            <!-- <div class="p-2">Flex item 3</div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+      const wrap_content = document.querySelector(".wrap-content")
+      const form_container = document.querySelector(".form-container")
+      const main_container = document.querySelector(".main-container")
+      function myFunction(x) {
+        if (x.matches) { // If media query matches               
+          wrap_content.classList.add  ("flex-wrap");
+          form_container.classList.remove  ("container")
+          main_container.classList.remove  ("container")
+                
+
+        } else {
+          wrap_content.classList.remove ("flex-wrap");        
+          form_container.classList.add  ("container")
+          main_container.classList.add  ("container")
+        }
+        }
+      
+          // Create a MediaQueryList object
+          let x = window.matchMedia("(max-width: 900px)")
+          console.log(wrap_content)
+
+            myFunction(x);
+
+
+            x.addEventListener("change", function() {
+                myFunction(x);
+              });
+
+              const button = document.querySelectorAll("button")
+button.forEach((btn)=>{
+    btn.addEventListener("click",()=>{
+        
+        window.location.href=("/login.html");
+    })
+})
+    </script>
+  </body> 
+</html>
